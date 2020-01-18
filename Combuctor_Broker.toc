@@ -7,9 +7,6 @@
 ## OptionalDeps: LibStub, CallbackHandler-1.0, LibDataBroker-1.1
 ## Dependencies: Combuctor
 
-Libs\LibStub\LibStub.lua
-Libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
-Libs\LibDataBroker-1.1\LibDataBroker-1.1.lua
-
+libs\LibDataBroker-1.1\LibDataBroker-1.1.lua
 Localization.lua
 Combuctor_Broker.lua
