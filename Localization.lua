@@ -1,4 +1,5 @@
-local Ace = LibStub("AceLocale-3.0")
+local PLUGIN = ...
+local Ace = LibStub('AceLocale-3.0')
 
 -- English
-Ace:NewLocale("Combuctor", "enUS", true).OptionsToggle = '<Control LeftClick> to toggle the options frame'
+Ace:NewLocale(PLUGIN, 'enUS', true).OptionsToggle = '<Control LeftClick> to toggle the options frame'

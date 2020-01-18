@@ -1,3 +1,9 @@
+##### 8.3.0
+* Updated for Visions of Nzoth.
+
+##### 8.2.0
+* Updated for World of Warcraft patch 8.2.0.
+
 ##### 13
 * Updated for Shadow of Argus
 

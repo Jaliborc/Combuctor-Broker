@@ -1,5 +1,5 @@
 --[[
-Copyright 2011-2017 João Cardoso
+Copyright 2011-2020 João Cardoso
 Combuctor Broker is distributed under the terms of the GNU General Public License (or the Lesser GPL).
 This file is part of Combuctor Broker.
 
@@ -17,30 +17,30 @@ You should have received a copy of the GNU General Public License
 along with Combuctor Broker. If not, see <http://www.gnu.org/licenses/>.
 --]]
 
-local L = LibStub('AceLocale-3.0'):GetLocale('Combuctor')
+local PLUGIN = ...
+local Addon = Bagnon or Combuctor
+local L = LibStub('AceLocale-3.0'):GetLocale(PLUGIN)
 
-LibStub:GetLibrary('LibDataBroker-1.1'):NewDataObject('Combuctor_Broker', {
-	icon = [[Interface\Icons\INV_Misc_Bag_07]],
+LibStub:GetLibrary('LibDataBroker-1.1'):NewDataObject(PLUGIN, {
 	type = 'launcher',
-	label = 'Combuctor',
-	text = 'Combuctor',
+	icon = [[Interface\Icons\INV_Misc_Bag_07]],
+	label = Addon.Name,
+	text = Addon.Name,
 
 	OnTooltipShow = function(self)
-		self:SetText('Combuctor')
+		self:SetText(Addon.Name)
 		self:AddLine(L.BagToggle, 1, 1, 1)
 		self:AddLine(L.BankToggle, 1, 1, 1)
 		self:AddLine(L.OptionsToggle, 1, 1, 1)
 	end,
-	
+
 	OnClick = function(self, button)
-		if button == 'LeftButton' then
-			if IsControlKeyDown() then
-				Combuctor:ShowOptions()
-			else
-				Combuctor:Toggle(BACKPACK_CONTAINER)
-			end
+		if IsShiftKeyDown() then
+			Addon:ShowOptions()
+		elseif button == 'LeftButton' then
+			Addon.Frames:Toggle('inventory')
 		elseif button == 'RightButton' then
-			Combuctor:Toggle(BANK_CONTAINER)
+			Addon.Frames:Toggle('bank')
 		end
 	end,
 })

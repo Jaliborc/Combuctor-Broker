@@ -1,4 +1,4 @@
-## Interface: 70300
+## Interface: 11303
 ## Title: |cff5FC412Combuctor Broker|r
 ## Notes: A DataBroker launcher for Combuctor
 ## Author: Jaliborc (João Cardoso)
